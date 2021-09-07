@@ -1,0 +1,3 @@
+[submodule "ChatServer"]
+	path = ChatServer
+	url = git@github.com:skafdan/ChatServer.git
