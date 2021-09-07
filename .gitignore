@@ -2,4 +2,4 @@
 .vagrant/
 
 #Log files
-*.Log
+*.log
