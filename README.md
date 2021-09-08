@@ -2,4 +2,4 @@
 A deployment of a Java TCP chatserver using cloud services, namely Amazon webservices.
 
 ## Cloning
-This project contains a submodule use `git clone --recurse-submodules -j8 git://github.com/foo/bar.git` to clone with submodule.
+This project contains a submodule use `git clone --recurse-submodules git@github.com:skafdan/ChatServer-Deployment.git` to clone with submodule.
