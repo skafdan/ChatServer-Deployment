@@ -1,2 +1,2 @@
 # ChatServer-Deployment- COSC349 - Assignment 2
-A deployment of a java TCP chatserver using cloud services, namely Amazon webservices.
+A deployment of a Java TCP chatserver using cloud services, namely Amazon webservices.
