@@ -29,7 +29,13 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "/vagrant", type: "rsync"
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
-    apt-get install -y mysql-server
+    apt-get install -y mysql-server make openjdk-16-jdk nginx
+
+    mkdir -p /usr/share/java/mariadb-jdbc/
+    mkdir -p /usr/lib/jvm/default-runtime/jre/lib/ext/
+    wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.3/mariadb-java-client-2.7.3.jar
+    mv mariadb-java-client-2.7.3.jar /usr/share/java/mariadb-jdbc/
+    ln -s ln -s /usr/share/java/mariadb-jdbc/mariadb-java-client.jar /usr/lib/jvm/default-runtime/jre/lib/ext/ 
   SHELL
   config.vm.provision "shell", path: "database/setupDB.sh"
 end
