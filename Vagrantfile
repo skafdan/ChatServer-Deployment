@@ -26,4 +26,10 @@ Vagrant.configure("2") do |config|
     override.ssh.private_key_path = "~/.ssh/cosc349-lab.pem"
 
   end
+  config.vm.synced_folder ".", "/vagrant", type: "rsync"
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    apt-get install -y mysql-server
+  SHELL
+  config.vm.provision "shell", path: "database/setupDB.sh"
 end
