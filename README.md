@@ -25,6 +25,26 @@ Vagrantfile:
 
 ```
 
+# Database 
+An Amazon RDS - `mariadb` needs to be manually created and select the option to 
+create an initial database called `chatserver` also set the username and password.
+
+The endpoint, username and password need to updated in the following locations:
+- `ChatServer/data.properties`
+- `database/setupDB.sh`
+
+# Starting the server
+Log into the created instance, `vagrant ssh`, `cd` into the project directory 
+```
+$ cd /vagrant/ChatServer/
+```
+compile with the `make` command and start the server with the provided script.
+```
+$ make
+$ sudo ./startServer.sh
+```
+
+
 ## Submodule documentation
 # ChatServer
 A simple terminal chat-server and terminal client written in Java that uses TCP 
