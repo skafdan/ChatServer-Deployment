@@ -4,7 +4,28 @@ A deployment of a Java TCP chatserver using cloud services, namely Amazon webser
 ## Cloning
 This project contains a submodule use `git clone --recurse-submodules git@github.com:skafdan/ChatServer-Deployment.git` to clone with submodule.
 
-## Submodule documenation
+# AWS authentication
+The vagrant file uses the aws plugin by [mitchellh](https://github.com/mitchellh/vagrant-aws).
+Three environment variables from your AWS account, need to be set for your deployment to work; 
+- access_key_id
+- secret_access_key
+- session_token
+
+In addition a ssh keypair needs to be set and the private key must be present somewhere accessible on your system.
+
+Vagrantfile:
+```
+    aws.keypair_name = <your keypair name>
+
+    aws.ami = "ami-09e67e426f25ce0d7"
+    aws.instance_type = "t2.micro" 
+    aws.security_groups = "chatserver"
+    override.ssh.username = "ubuntu"
+    override.ssh.private_key_path = "/path/to/<privatekey.pem>"
+
+```
+
+## Submodule documentation
 # ChatServer
 A simple terminal chat-server and terminal client written in Java that uses TCP 
 and TLS encryption.
