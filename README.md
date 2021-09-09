@@ -6,6 +6,12 @@ This project contains a submodule use `git clone --recurse-submodules git@github
 
 # AWS authentication
 The vagrant file uses the aws plugin by [mitchellh](https://github.com/mitchellh/vagrant-aws).
+To install please use:
+```
+$ vagrant plugin install vagrant-aws
+
+$ vagrant up --provider=aws
+```
 Three environment variables from your AWS account, need to be set for your deployment to work; 
 - access_key_id, `AWS_ACCESS_KEY_ID`
 - secret_access_key, `AWS_SECRET_ACCESS_KEY`
