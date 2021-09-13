@@ -12,6 +12,10 @@ $ vagrant plugin install vagrant-aws
 
 $ vagrant up --provider=aws
 ```
+An vagrant dummy box file needs to be added:
+```
+vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
+```
 Three environment variables from your AWS account, need to be set for your deployment to work; 
 - access_key_id, `AWS_ACCESS_KEY_ID`
 - secret_access_key, `AWS_SECRET_ACCESS_KEY`
