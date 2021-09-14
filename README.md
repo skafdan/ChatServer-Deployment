@@ -3,6 +3,8 @@ A deployment of a Java TCP chatserver using cloud services, namely Amazon webser
 
 ## Cloning
 This project contains a submodule use `git clone --recurse-submodules git@github.com:skafdan/ChatServer-Deployment.git` to clone with submodule.
+### Pulling
+To ensure submodule is at latest change `cd` in to the `ChatServer` directory and checkout to the master branch and pull changes
 
 # AWS authentication
 The vagrant file uses the aws plugin by [mitchellh](https://github.com/mitchellh/vagrant-aws).
