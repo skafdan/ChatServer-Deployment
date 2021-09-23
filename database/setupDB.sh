@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export DBHOST='chatserver-rds.ctqfgoekb0ox.us-east-1.rds.amazonaws.com'
+export DBHOST='chatlogs.ctqfgoekb0ox.us-east-1.rds.amazonaws.com'
 export DBNAME='chatserver'
 export DBUSER='admin'
 export DBPASSWD='quack1nce4^'
