@@ -8,6 +8,7 @@ $db_password = "Quack1nce4^";
 $username = $_POST['username'];
 $password = $_POST['password'];
 $salt = sha1($password);
+$password = hash("sha256", $password.$salt);
 
 echo($dbhost." ".$db_username." ".$db_password." ".$dbname." ".$dbport."<br>");
 
