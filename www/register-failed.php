@@ -8,6 +8,7 @@
     <title>Chat Server - Register</title>
     <meta name="description" content="COSC349 Assignment 2">
     <meta name="author" content="Hayden McAlister">
+    <meta http-equiv="refresh" content="3;url=register-account.php" />
 
     <!-- CSS references: from SkeletonCSS -->
     <link rel="stylesheet" href="css/normalize.css">

@@ -20,12 +20,12 @@ Vagrant.configure("2") do |config|
     override.nfs.functional = false
     override.vm.allowed_synced_folder_types = :rsync
 
-    aws.keypair_name = "cosc349-lab"
-    override.ssh.private_key_path = "~/.ssh/cosc349-lab.pem"
+    aws.keypair_name = "COSC349-SSH"
+    override.ssh.private_key_path = "~/.ssh/COSC349-SSH.pem"
 
     aws.instance_type = "t2.micro"
 
-    aws.security_groups = ["chatserver"]
+    aws.security_groups = ["chatserver", "webserver"]
 
     # aws.availability_zone = "us-east-1a"
     # aws.subnet_id = ""
@@ -47,13 +47,13 @@ Vagrant.configure("2") do |config|
             SHELL
 
         chatserver.vm.provision "shell", path: "database/setupDB.sh"
-    end
+  end
 
     config.vm.define "webserver" do |webserver|
         webserver.vm.hostname = "webserver"
         webserver.vm.synced_folder ".", "/vagrant", type: "rsync"
 
-        config.vm.provision "shell", inline: <<-SHELL
+        webserver.vm.provision "shell", inline: <<-SHELL
             apt-get update
             apt-get install -y apache2 php libapache2-mod-php php-mysql
             cp /vagrant/usersite.conf /etc/apache2/sites-available/
