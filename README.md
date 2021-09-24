@@ -71,6 +71,7 @@ create an initial database called `chatserver` also set the username and passwor
 The endpoint, username and password need to updated in the following locations:
 - `ChatServer/data.properties`
 - `database/setupDB.sh`
+- `www/register-account.php`
 
 # Starting the server
 Log into the created instance with `vagrant ssh`, then `cd` into the project directory.
