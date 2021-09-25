@@ -43,9 +43,15 @@
     <div class="container">
         <div class="row">
             <div class="twelve columns" style="text-align:center; ">
-                <a class="button" href="Client.jar" download style="background-color: #0cc712; color:#000; height:10%; line-height:10%;">
-                    <h2 style="margin: 0;">Download the Client here</h2>
+                <a class="button" href="Client.jar" download style="background-color: #0cc712; color:#000; height:10%; line-height:10%;font-family: 'Lucida Console', 'Courier New', monospace;">
+                    <h2 style="margin: 0;">Download the Client</h2>
                 </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="twelve columns" style="text-align:center; ">
+                <h4>Requires Java 16 to run</h4>
             </div>
         </div>
 
