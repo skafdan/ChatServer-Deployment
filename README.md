@@ -36,6 +36,10 @@ Three environment variables from your AWS account, need to be set for your deplo
 - access_key_id, `AWS_ACCESS_KEY_ID`
 - secret_access_key, `AWS_SECRET_ACCESS_KEY`
 - session_token,`AWS_SESSION_TOKEN`
+
+The chatserver will also use your AWS credentials to backup the database to S3, 
+as such your credentials must also be placed into the folder 
+`/path/to/Chatserver-Deployment/.aws/credentials`
 ### SSH-keys
 In addition a `ssh keypair` needs to be created and the private key must be present somewhere accessible on your system.
 Ensure the correct permissions are set:
