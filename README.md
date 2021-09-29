@@ -75,8 +75,11 @@ create an initial database called `chatserver` also set the username and passwor
 The endpoint, username and password need to updated in the following locations:
 - `ChatServer/data.properties`
 - `database/setupDB.sh`
-- `database/backup_messages.sh`
-- `www/register-account.php`
+
+# S3 Bucket
+An Amazon S3 bucket must be set up manually for the backup scripts to function. You can choose whichever bucket name you please, but ensure you update the bucket name in `database/backup_to_bucket.py`. Note that we need not care about the bucket endpoint, as this is handled using the `.aws/credentials` file. 
+
+Note that if your aws credentials expire, the backups will fail on the Chatserver EC2 instance. However, this should not affect the rest of the deployment, and will only cause the backups to fail. To fix this issue, you can update your credentials on the EC2 instance to valid ones.
 
 # Starting the server
 Log into the created instance with `vagrant ssh`, then `cd` into the project directory.
@@ -126,12 +129,12 @@ $ make
 ## Usage
 Run the installation script `startServer.sh` as root.
 ```
-# bash /path/to/ChatServer/startServer.sh
+/path/to/ChatServer/ # ./startServer.sh
 ```
 It can also be run with an optional port number, however it will use the port `7777`  if not provided.
 
 ```
-# bash /path/to/ChatServer/startServer.sh [port]
+/path/to/ChatServer/ # ./startServer.sh [port]
 ```
 
 The script generates the TLS certificate and copies it the to default root of the 
