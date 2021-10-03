@@ -20,6 +20,9 @@ Most of the deployment is handled automatically but the vagrant provisioning, so
 8. Set ssh-keys in the `Vagrantfile` and the newly created security groups.
 9. `Vagrant up` the instance, ssh in, run the `make` command, and then [start the server](#starting-the-server).
 
+Optional: 
+Create a domain and update EC2 address for `chat-server` and website.
+
 Details about these instructions can be found in the subsequent sections, just click the links.
 # AWS authentication
 The vagrant file uses the aws plugin by [mitchellh](https://github.com/mitchellh/vagrant-aws).
