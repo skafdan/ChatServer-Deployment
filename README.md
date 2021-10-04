@@ -14,10 +14,14 @@ Most of the deployment is handled automatically but the vagrant provisioning, so
 2. Create a [SSH](#ssh-keys) keypair.
 3. Chmod the keys.
 4. Create the [RDS](#database) instance.
-5. Update [database endpoints](#database) and credentials in `data.properties` and `setupDB.sh`.
-6. Set [environment variables](#aws-authentication) for your AWS credentials.
-7. Set ssh-keys in the `Vagrantfile` and the newly created security groups.
-8. `Vagrant up` the instance, ssh in, run the `make` command, and then [start the server](#starting-the-server).
+5. Update [database endpoints](#database) and credentials in `data.properties`, `setupDB.sh`, `backup_messages.sh` and `register-account.php`.
+6. Create the [S3](#s3-bucket) bucket and update name in `backup_to_bucket.py`.
+7. Set [environment variables](#aws-authentication) for your AWS credentials.
+8. Set ssh-keys in the `Vagrantfile` and the newly created security groups.
+9. `Vagrant up` the instance, ssh in, run the `make` command, and then [start the server](#starting-the-server).
+
+Optional: 
+Create a domain and update EC2 address for `chat-server` and website.
 
 Details about these instructions can be found in the subsequent sections, just click the links.
 # AWS authentication
@@ -75,6 +79,8 @@ create an initial database called `chatserver` also set the username and passwor
 The endpoint, username and password need to updated in the following locations:
 - `ChatServer/data.properties`
 - `database/setupDB.sh`
+- `database/backup_messages.sh`
+- `www/register-account.php`
 
 # S3 Bucket
 An Amazon S3 bucket must be set up manually for the backup scripts to function. You can choose whichever bucket name you please, but ensure you update the bucket name in `database/backup_to_bucket.py`. Note that we need not care about the bucket endpoint, as this is handled using the `.aws/credentials` file. 
