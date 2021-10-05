@@ -185,3 +185,5 @@ The database requires two tables;
 - [MariaDB JDBC](https://docs.cs.cf.ac.uk/notes/accessing-mysql-with-java/)
 
 - [Vagrant-aws](https://github.com/mitchellh/vagrant-aws)
+
+- [Hashing Java](https://howtodoinjava.com/java/java-security/how-to-generate-secure-password-hash-md5-sha-pbkdf2-bcrypt-examples/) 
