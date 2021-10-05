@@ -1,9 +1,9 @@
 <?php
-$dbhost = "chatserverdb.cd3ixmxbmpj0.us-east-1.rds.amazonaws.com";
+$dbhost = "<Database endpoint>";
 $dbport = 3306;
-$dbname = "chatserverdb";
+$dbname = "chatserver";
 $db_username = "admin";
-$db_password = "Quack1nce4^";
+$db_password = "quack1nce4^";
 
 $username = $_POST['username'];
 $password = $_POST['password'];
