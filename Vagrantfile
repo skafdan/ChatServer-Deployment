@@ -20,12 +20,12 @@ Vagrant.configure("2") do |config|
     override.nfs.functional = false
     override.vm.allowed_synced_folder_types = :rsync
 
-    aws.keypair_name = "COSC349-SSH"
-    override.ssh.private_key_path = "~/.ssh/COSC349-SSH.pem"
+    aws.keypair_name = <key pair name>
+    override.ssh.private_key_path = <path to key pair>
 
     aws.instance_type = "t2.micro"
 
-    aws.security_groups = ["chatserver", "webserver"]
+    aws.security_groups = [<security groups>]
 
     # aws.availability_zone = "us-east-1a"
     # aws.subnet_id = ""
