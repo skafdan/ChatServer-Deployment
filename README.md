@@ -187,3 +187,5 @@ The database requires two tables;
 - [Vagrant-aws](https://github.com/mitchellh/vagrant-aws)
 
 - [Hashing Java](https://howtodoinjava.com/java/java-security/how-to-generate-secure-password-hash-md5-sha-pbkdf2-bcrypt-examples/) 
+
+- [S3 Object storage](https://hackmd.io/a8wHsmkVTh6-ud_vNAe2Mw)
